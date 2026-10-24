@@ -1,0 +1,237 @@
+<title>Viriya Dhamma Pratama | Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+  /*
+    Design Concept: "The Gallery Archive"
+    A minimal, high-contrast layout that treats the portfolio like a curated art exhibition.
+    Focus on generous negative space, sophisticated typography, and a rhythmic grid.
+  */
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --accent: #555555;
+    --muted: #f5f5f5;
+    --border: #e0e0e0;
+    --text-main: #333333;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0a0a0a;
+      --fg: #efefef;
+      --accent: #a0a0a0;
+      --muted: #161616;
+      --border: #262626;
+      --text-main: #cccccc;
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0a0a0a;
+    --fg: #efefef;
+    --accent: #a0a0a0;
+    --muted: #161616;
+    --border: #262626;
+    --text-main: #cccccc;
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin: 0;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 4rem;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-wrap: balance;
+    margin-top: 0;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* --- Header / Hero --- */
+  header {
+    margin-bottom: 8rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 3rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+  }
+
+  /* --- Sections --- */
+  section {
+    margin-bottom: 6rem;
+  }
+
+  .section-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    display: block;
+    letter-spacing: 0.2em;
+  }
+
+  /* --- Skills Grid --- */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  .skill-item {
+    border-left: 1px solid var(--border);
+    padding-left: 1.5rem;
+    transition: border-color 0.3s ease;
+  }
+
+  .skill-item:hover {
+    border-left-color: var(--fg);
+  }
+
+  .skill-name {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  /* --- Education Timeline --- */
+  .education-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .edu-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+    align-items: baseline;
+  }
+
+  .edu-school {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .edu-status {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+  }
+
+  /* --- Footer --- */
+  footer {
+    margin-top: 10rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+  }
+
+  @media (max-width: 600px) {
+    header { margin-bottom: 4rem; }
+    section { margin-bottom: 4rem; }
+    .edu-item {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+  }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono&family=Playfair+Display:ital,wght@0,400;1,400&display=swap">
+
+<div class="container">
+  <header>
+    <span class="hero-subtitle">Visual Artist & Creative</span>
+    <h1 class="hero-title">Viriya Dhamma<br>Pratama</h1>
+  </header>
+
+  <section id="about">
+    <span class="section-label">About Me</span>
+    <p style="font-size: 1.2rem; max-width: 600px;">
+      Seorang kreator visual yang berfokus pada detail dan estetika. Menggabungkan seni menangkap momen melalui lensa dengan presisi editing untuk menciptakan narasi visual yang bermakna.
+    </p>
+  </section>
+
+  <section id="expertise">
+    <span class="section-label">Expertise</span>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <span class="skill-name">Fotografi</span>
+        <p style="font-size: 0.9rem; color: var(--text-main);">Menangkap esensi melalui komposisi dan pencahayaan.</p>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Videografi</span>
+        <p style="font-size: 0.9rem; color: var(--text-main);">Bercerita melalui pergerakan dan ritme visual.</p>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Desain</span>
+        <p style="font-size: 0.9rem; color: var(--text-main);">Menerjemahkan ide menjadi bentuk visual yang fungsional.</p>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Editing</span>
+        <p style="font-size: 0.9rem; color: var(--text-main);">Menyempurnakan karya dengan ketelitian teknis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <span class="section-label">Education</span>
+    <div class="education-list">
+      <div class="edu-item">
+        <span class="edu-school">Universitas Negeri Semarang</span>
+        <span class="edu-status">Present</span>
+      </div>
+      <div class="edu-item">
+        <span class="edu-school">SMA Negeri 1 Tuntang</span>
+        <span class="edu-status">Graduated</span>
+      </div>
+      <div class="edu-item">
+        <span class="edu-school">SMP Negeri 3 Tuntang</span>
+        <span class="edu-status">Graduated</span>
+      </div>
+      <div class="edu-item">
+        <span class="edu-school">SD Negeri Watuagung 1</span>
+        <span class="edu-status">Graduated</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Viriya Dhamma Pratama. Built with precision.
+  </footer>
+</div>
